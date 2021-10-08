@@ -29,7 +29,7 @@ $var4 = "Время выключения ПК"
 #формируем данные  
 #$All = $User + ' ' + $PCname + ' ' + $Domain_name + ' ' + $var2 + ' ' + $TimeOn + ' ' + $var4 + ' ' + $date + ' ' + $var1 + ' ' + $days + ' ' + $var3 + ' ' + $Hours + ':' + $Minutes + ':' + $Seconds
 $All = $User + ' | ' + $PCname + ' | ' + $var2 + '  ' + $TimeOn + ' | ' + $var4 + '  ' + $date + ' | ' + $var1 + '  ' + $days + '  ' + $var3 + '  ' + $Hours + ':' + $Minutes + ':' + $Seconds 
-$All >> \\server-f\domainuser$\on_off\$Domen\$User"_"$PCname.txt
+$All >> \\fs\domainuser$\on_off\$Domen\$User"_"$PCname.txt
 #описываем запись в файл имя домена_имя\пользователя\имя компа
 $Domain_name = (Get-WMIObject -Class Win32_ComputerSystem | Select-Object domain).domain 
 $Domain = $Domain_name.split(".") 
